@@ -1,2 +1,2 @@
 # bookbot
-bot.dev bookbot for python
+boot.dev bookbot for python
