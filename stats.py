@@ -16,19 +16,24 @@ def characters(e):
         string = f.read()
     words = string.split()
     for i in words:
+        new_dict = {}
         for e in i:
-            new_dict = {}
-            if e not in char_list:
-                char_list.append(e)
-                new_dict["name"] = e
-                new_dict["num"] = 1
-            if e in char_list:
+            p = e.lower()
+
+            word_dict = {}
+            if p not in char_list:
+                char_list.append(p)
+                new_dict["char"] = p
+                new_dict["num"] = 0
+            if p in char_list:
                 new_dict["num"] += 1
             dict_list.append(new_dict)
-            print(dict_list)
-                
-    # for a in char_list:
-    #     print(f"{a} {word_dict[f"{a}"]}")
+
+    print(dict_list)
+            
+            
+            # for a in char_list:
+            #     print(f"{a} {word_dict[f"{a}"]}")
     return 
 
 
@@ -41,6 +46,5 @@ def sort_text(e):
          sorted_dict = list_dict.sort(reverse=True, key=sort_dicts)
          print(sorted_dict)
 
-    
-sort_text(2)
-    
+
+characters(4)
