@@ -10,30 +10,21 @@ def words(e):
     return 
 
 def characters(e):
-    char_list = []
-    dict_list = []
+
     with open("/home/vyper5612/bootdotdev/bookbot/bookbot/books/frankenstein.txt")as f:
         string = f.read()
     words = string.split()
-    for i in words:
-        new_dict = {}
+    for i in words:        
         for e in i:
             p = e.lower()
 
-            word_dict = {}
-            if p not in char_list:
-                char_list.append(p)
-                new_dict["char"] = p
-                new_dict["num"] = 0
-            if p in char_list:
-                new_dict["num"] += 1
-            dict_list.append(new_dict)
+            new_dict = dict(char=p, num=1)
+            print(new_dict)
 
-    print(dict_list)
-            
-            
-            # for a in char_list:
-            #     print(f"{a} {word_dict[f"{a}"]}")
+
+
+
+
     return 
 
 
