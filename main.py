@@ -10,6 +10,6 @@ def main():
     return
 
 
-words(1)
-characters(1)
+words()
+characters()
 
