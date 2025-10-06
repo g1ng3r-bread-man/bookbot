@@ -1,15 +1,20 @@
-from stats import words
-from stats import characters
-def get_book_text(f):
-    with open("/home/vyper5612/bootdotdev/bookbot/bookbot/books/frankenstein.txt")as f:
-        file_contents = f.read()
-    return file_contents
+from stats import *
+import sys
 
 def main():
-    print(get_book_text(1))
-    return
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>  eg. books/frankenstein.txt")
+        sys.exit(1)
+    global filepath 
+    filepath = sys.argv[1]
 
 
-words()
-characters()
+
+    format(sys.argv[1])
+    
+
+
+if __name__ == "__main__":
+    main()
+    
 
